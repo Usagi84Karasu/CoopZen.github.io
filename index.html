@@ -3,92 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Barre de Navigation</title>
+  <title>Navigation Mobile</title>
   <style>
     body {
       margin: 0;
+      padding-bottom: 60px; /* espace pour la navbar */
       font-family: 'Segoe UI', sans-serif;
     }
 
-    nav {
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
       background-color: #111;
-      padding: 1rem 2rem;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+      z-index: 100;
     }
 
-    .logo {
-      color: #fff;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-    }
-
-    .nav-links li a {
-      color: #fff;
+    .bottom-nav a {
+      color: white;
       text-decoration: none;
+      font-size: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       transition: color 0.3s;
     }
 
-    .nav-links li a:hover {
+    .bottom-nav a:hover {
       color: #00bcd4;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #111;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        padding: 1rem;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .menu-toggle {
-        cursor: pointer;
-        color: #fff;
-        font-size: 1.5rem;
-        display: block;
-      }
-    }
-
-    .menu-toggle {
-      display: none;
+    .bottom-nav i {
+      font-size: 1.4rem;
+      margin-bottom: 2px;
     }
   </style>
+
+  <!-- Icônes via Font Awesome (optionnel mais stylé) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <nav>
-    <div class="logo">MonSite</div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#">Accueil</a></li>
-      <li><a href="#">À propos</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Contenu de la page -->
+  <div style="padding: 1rem;">
+    <h2>Bienvenue sur CookZen</h2>
+    <p>Explorez des recettes sans gluten !</p>
+  </div>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('active');
-    }
-  </script>
+  <!-- Barre de navigation en bas -->
+  <div class="bottom-nav">
+    <a href="#"><i class="fas fa-home"></i><span>Accueil</span></a>
+    <a href="#"><i class="fas fa-utensils"></i><span>Recettes</span></a>
+    <a href="#"><i class="fas fa-user"></i><span>Profil</span></a>
+  </div>
 
 </body>
 </html>
-
