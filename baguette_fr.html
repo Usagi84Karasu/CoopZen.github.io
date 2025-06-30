@@ -3,68 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CookZen - Pâte à Pizza</title>
+  <title>Recettes sans gluten</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: sans-serif;
-      background: #f8f8f8;
+      padding: 0;
+      background: #fff;
     }
-    .footer {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 120px;
-      background: #db3131;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 32px;
-      z-index: 10;
+    .app {
+      max-width: 400px;
+      margin: auto;
+      border: 2px solid black;
+      padding: 1rem;
     }
-    .barre {
-      position: fixed;
-      top: 120px;
-      left: 0;
-      width: 100%;
-      height: 8px;
-      background: black;
-      z-index: 9;
-    }
-    .contenu {
-      margin-top: 140px;
-      padding: 20px;
-      font-size: 18px;
-    }
-    .cookzen-title {
-      position: absolute;
-      bottom: 10px;
-      left: 20px;
-      font-size: 48px;
+    header {
+      font-size: 1.5rem;
       font-weight: bold;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .search-bar {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    input[type="text"] {
+      flex: 1;
+      padding: 0.5rem;
+      border: 1px solid #000;
+    }
+    button {
+      padding: 0.5rem;
+      background: black;
       color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .recipe {
+      border: 1px solid black;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+    }
+    .recipe img {
+      width: 60px;
+      height: 60px;
+      margin-right: 1rem;
+    }
+    .recipe-info {
+      flex: 1;
+    }
+    .recipe-info h3 {
+      margin: 0;
+    }
+    .bottom-nav {
+      display: flex;
+      justify-content: space-around;
+      border-top: 1px solid black;
+      padding-top: 0.5rem;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
-  <div class="footer">
-    <div class="cookzen-title">CookZen</div>
+  <div class="app">
+    <header>Recettes sans gluten</header>
+    <div class="search-bar">
+      <input type="text" placeholder="Rechercher">
+      <button>Sans Gluten</button>
+    </div>
+
+    <div class="recipe">
+      <img src="https://via.placeholder.com/60" alt="Salade de quinoa">
+      <div class="recipe-info">
+        <h3>Salade de quinoa</h3>
+        <p>25 min</p>
+      </div>
+    </div>
+
+    <div class="recipe">
+      <img src="https://via.placeholder.com/60" alt="Poulet rôti au citron">
+      <div class="recipe-info">
+        <h3>Poulet rôti au citron</h3>
+        <p>50 min</p>
+      </div>
+    </div>
+
+    <div class="recipe">
+      <img src="https://via.placeholder.com/60" alt="Pâtes aux légumes">
+      <div class="recipe-info">
+        <h3>Pâtes aux légumes</h3>
+        <p>30 min</p>
+      </div>
+    </div>
+
+    <div class="recipe">
+      <img src="https://via.placeholder.com/60" alt="Brownies">
+      <div class="recipe-info">
+        <h3>Brownies</h3>
+        <p>45 min</p>
+      </div>
+    </div>
+
+    <div class="bottom-nav">
+      <span>🏠</span>
+      <span>🔍</span>
+      <span>⚙️</span>
+    </div>
   </div>
-  <div class="barre"></div>
-  <div class="contenu">
-  <p><strong>Préparer la pâte</strong></p>
-  <p>Activation levure avec sucre et eau 10 min.<br>
-  Mélange ingrédients secs (y compris psyllium), ajoute levure, huile et eau.<br>
-  Mélange jusqu’à consistance épaisse et collante.</p>
-
-  <p><strong>Façonnage et repos</strong></p>
-  <p>Forme deux longs rouleaux. Couvre et lève 45–60 min.</p>
-
-  <p><strong>Cuisson</strong></p>
-  <p>Badigeonne d’eau, incise légèrement.<br>
-  Enfourne à 220 °C avec vapeur (bol d’eau) pendant 25–30 min.</p>
-</div>
 </body>
 </html>
